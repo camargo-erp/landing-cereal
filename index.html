@@ -10,6 +10,20 @@
 <meta property="og:image" content="https://landing-cereal.vercel.app/envase.png">
 <meta property="og:url" content="https://landing-cereal.vercel.app">
 <meta property="og:type" content="website">
+
+<!-- ============================================================ -->
+<!-- GOOGLE ANALYTICS 4 - Camargo Distribuidora                   -->
+<!-- Property: camargo.com.ar | Measurement ID: G-TQ0GNTF2JN      -->
+<!-- ============================================================ -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TQ0GNTF2JN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TQ0GNTF2JN');
+</script>
+<!-- ============================================================ -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -271,10 +285,8 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-w
     <h2 class="section-title" style="color:var(--cream)">Precios vigentes 2026</h2>
     <p class="section-sub">Descuentos por volumen. Cotización inmediata por WhatsApp.</p>
 
-    <!-- 2 tarjetas principales: Bidón con envase CABA + Caja Interior -->
     <div class="precios-grid">
 
-      <!-- TARJETA 1: BIDÓN CON ENVASE CABA -->
       <div class="precio-card popular" id="bidon-envase">
         <div class="popular-tag">Más pedido</div>
         <div class="precio-header">
@@ -295,14 +307,12 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-w
         </ul>
         <a href="https://api.whatsapp.com/send?phone=5491151394939&text=Hola%2C%20quiero%20cotizar%20Bid%C3%B3n%205L%20con%20envase%20CABA%2FGBA" class="precio-btn wa-link" data-section="precios" data-modalidad="envase_caba" target="_blank" rel="noopener">Cotizar fraccionado →</a>
 
-        <!-- Bloque volumen alto -->
         <div class="inline-block" id="volumen-caba">
           <div class="inline-block-label">💼 ¿Comprás 100L o más?</div>
           <div class="inline-block-sub">Tenemos precios especiales por volumen</div>
           <a href="https://api.whatsapp.com/send?phone=5491151394939&text=Hola%2C%20quiero%20cotizar%20VOLUMEN%20100L%20o%20m%C3%A1s%20CABA%2FGBA" class="inline-block-link wa-link" data-section="precios" data-modalidad="volumen_caba" target="_blank" rel="noopener">Cotizar mayorista →</a>
         </div>
 
-        <!-- Bloque recambio -->
         <div class="inline-block" id="recambio-bidon">
           <div class="inline-block-label">💡 ¿Ya tenés tus bidones vacíos?</div>
           <div class="inline-block-sub">Recambio: desde $10.500/bidón ($2.100/L)</div>
@@ -310,7 +320,6 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-w
         </div>
       </div>
 
-      <!-- TARJETA 2: CAJA INTERIOR -->
       <div class="precio-card" id="caja-interior">
         <div class="precio-header">
           <div class="precio-type">Interior del país</div>
@@ -330,7 +339,6 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-w
         </ul>
         <a href="https://api.whatsapp.com/send?phone=5491151394939&text=Hola%2C%20quiero%20cotizar%20Caja%20Interior%20Alcohol%20de%20Cereal" class="precio-btn wa-link" data-section="precios" data-modalidad="caja_interior" target="_blank" rel="noopener">Cotizar Interior →</a>
 
-        <!-- Bloque volumen alto Interior -->
         <div class="inline-block" id="volumen-interior">
           <div class="inline-block-label">💼 ¿Comprás 100L o más?</div>
           <div class="inline-block-sub">Tenemos precios especiales para B2B Interior</div>
@@ -340,7 +348,6 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-w
 
     </div>
 
-    <!-- BLOQUE MAYORISTA TAMBOR -->
     <div class="tambor-block" id="tambor">
       <div class="tambor-header">
         <span class="tambor-header-icon">🛢️</span>
@@ -349,7 +356,6 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-w
       </div>
       <div class="tambor-grid">
 
-        <!-- Tambor Recambio -->
         <div class="tambor-card" id="tambor-recambio">
           <div class="tambor-card-name">Recambio tambor</div>
           <div class="tambor-card-sub">Traés vos el tambor vacío</div>
@@ -363,7 +369,6 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-w
           <a href="https://api.whatsapp.com/send?phone=5491151394939&text=Hola%2C%20quiero%20cotizar%20Tambor%20200L%20recambio" class="tambor-card-btn wa-link" data-section="precios" data-modalidad="tambor_recambio" target="_blank" rel="noopener">Cotizar recambio →</a>
         </div>
 
-        <!-- Pack Tambor + Alcohol -->
         <div class="tambor-card" id="tambor-venta">
           <div class="tambor-card-name">Pack tambor + alcohol</div>
           <div class="tambor-card-sub">Tambor + 200L incluidos</div>
@@ -500,7 +505,7 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-w
 
 <script>
 /* ===========================================================================
-   CAMARGO LANDING - SCRIPTS
+   CAMARGO LANDING - SCRIPTS (v2 con tracking GA4)
    FALLBACK SAFE: si este JS falla, los CTAs igual funcionan con prefilled
    básico hardcoded en cada href.
    =========================================================================== */
@@ -540,13 +545,22 @@ try {
     function getUtms() {
       var params = new URLSearchParams(window.location.search);
       return {
-        source: (params.get('utm_source') || '').toLowerCase()
+        source: (params.get('utm_source') || '').toLowerCase(),
+        medium: (params.get('utm_medium') || '').toLowerCase(),
+        campaign: (params.get('utm_campaign') || '').toLowerCase(),
+        content: (params.get('utm_content') || '').toLowerCase()
       };
     }
 
-    function getOriginPrefix(utms) {
-      if (utms.source === 'google') return 'Vi el aviso en Google';
-      if (utms.source === 'facebook' || utms.source === 'meta' || utms.source === 'instagram' || utms.source === 'ig' || utms.source === 'fb') return 'Vi el aviso en Meta';
+    function getOrigin(utms) {
+      if (utms.source === 'google') return 'google';
+      if (utms.source === 'facebook' || utms.source === 'meta' || utms.source === 'instagram' || utms.source === 'ig' || utms.source === 'fb') return 'meta';
+      return 'organico';
+    }
+
+    function getOriginPrefix(origin) {
+      if (origin === 'google') return 'Vi el aviso en Google';
+      if (origin === 'meta') return 'Vi el aviso en Meta';
       return 'Hola, quiero consultar';
     }
 
@@ -566,7 +580,8 @@ try {
 
     function buildWaLink(modalidad) {
       var utms = getUtms();
-      var prefix = getOriginPrefix(utms);
+      var origin = getOrigin(utms);
+      var prefix = getOriginPrefix(origin);
       var modText = getModalityText(modalidad);
       var fullText = prefix + ', ' + modText;
       return 'https://api.whatsapp.com/send?phone=' + PHONE + '&text=' + encodeURIComponent(fullText);
@@ -574,9 +589,32 @@ try {
 
     function applyWaLinks() {
       try {
+        var utms = getUtms();
+        var origin = getOrigin(utms);
+
         document.querySelectorAll('.wa-link').forEach(function(el) {
           var modalidad = el.getAttribute('data-modalidad') || 'general';
+          var section = el.getAttribute('data-section') || 'unknown';
+
+          // Actualizar href con prefilled inteligente
           el.setAttribute('href', buildWaLink(modalidad));
+
+          // ===== TRACKING GA4 - Evento click_whatsapp =====
+          el.addEventListener('click', function() {
+            try {
+              if (typeof gtag === 'function') {
+                gtag('event', 'click_whatsapp', {
+                  'modalidad': modalidad,
+                  'section': section,
+                  'origen': origin,
+                  'utm_campaign': utms.campaign || '(none)',
+                  'utm_content': utms.content || '(none)'
+                });
+              }
+            } catch (e) {
+              // Silencioso: si GA4 no carga, el clic igual funciona
+            }
+          });
         });
       } catch (e) {
         // Silencioso: si algo falla, los href ya tienen fallback hardcoded
