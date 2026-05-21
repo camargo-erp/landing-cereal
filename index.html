@@ -97,7 +97,7 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-w
 .precios-section .section-sub{color:rgba(247,244,237,0.6)}
 .precios-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:760px;margin:0 auto}
 @media(max-width:600px){.precios-grid{grid-template-columns:1fr}}
-.precio-card{background:rgba(255,255,255,0.04);border:1px solid rgba(200,169,96,0.15);border-radius:var(--radius);padding:36px 28px;position:relative;transition:all 0.3s}
+.precio-card{background:rgba(255,255,255,0.04);border:1px solid rgba(200,169,96,0.15);border-radius:var(--radius);padding:36px 28px;position:relative;transition:all 0.3s;scroll-margin-top:100px}
 .precio-card:hover{border-color:var(--gold);background:rgba(255,255,255,0.06)}
 .precio-card.popular{border-color:var(--gold);background:rgba(200,169,96,0.06)}
 .popular-tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--green-deep);padding:5px 20px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
@@ -107,14 +107,42 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-w
 .precio-pres{font-size:13px;color:rgba(247,244,237,0.5)}
 .precio-amount{text-align:center;margin-bottom:24px}
 .precio-desde-label{font-size:13px;color:rgba(247,244,237,0.5)}
-.precio-number{font-size:48px;font-weight:700;line-height:1;color:var(--gold)}
-.precio-number span{font-size:18px;font-weight:400;color:rgba(247,244,237,0.5)}
-.precio-note{font-size:12px;color:rgba(247,244,237,0.4);margin-top:6px;font-style:italic}
+.precio-number{font-size:44px;font-weight:700;line-height:1;color:var(--gold)}
+.precio-number span{font-size:16px;font-weight:400;color:rgba(247,244,237,0.5)}
+.precio-sub-amount{font-size:13px;color:rgba(247,244,237,0.5);margin-top:6px}
 .precio-feats{list-style:none;margin-bottom:24px}
 .precio-feats li{padding:8px 0;font-size:13px;color:rgba(247,244,237,0.7);display:flex;align-items:flex-start;gap:10px;border-bottom:1px solid rgba(200,169,96,0.06)}
 .precio-feats li::before{content:'✓';color:var(--gold);font-weight:700;flex-shrink:0;font-size:14px}
 .precio-btn{display:block;text-align:center;padding:14px;background:var(--gold);color:var(--green-deep);border-radius:40px;text-decoration:none;font-weight:600;font-size:14px;transition:all 0.3s}
 .precio-btn:hover{transform:translateY(-2px);box-shadow:0 4px 20px rgba(200,169,96,0.3)}
+
+/* Bloques inline secundarios dentro de la card */
+.inline-block{margin-top:20px;padding-top:18px;border-top:1px dashed rgba(200,169,96,0.25);text-align:center}
+.inline-block-label{font-size:13px;color:rgba(247,244,237,0.85);margin-bottom:4px;font-weight:500}
+.inline-block-sub{font-size:12px;color:rgba(247,244,237,0.55);margin-bottom:10px;line-height:1.5}
+.inline-block-link{display:inline-block;font-size:13px;color:var(--cream);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px;transition:all 0.2s}
+.inline-block-link:hover{color:var(--gold)}
+
+/* Bloque Mayorista Tambor */
+.tambor-block{max-width:760px;margin:40px auto 0;background:rgba(200,169,96,0.04);border:1px solid rgba(200,169,96,0.2);border-radius:var(--radius);padding:32px 28px;scroll-margin-top:100px}
+.tambor-header{text-align:center;margin-bottom:28px}
+.tambor-header-icon{font-size:36px;margin-bottom:8px;display:block}
+.tambor-header h3{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--cream);font-weight:700}
+.tambor-header p{font-size:13px;color:rgba(247,244,237,0.5);margin-top:4px}
+.tambor-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:600px){.tambor-grid{grid-template-columns:1fr}}
+.tambor-card{background:rgba(255,255,255,0.03);border:1px solid rgba(200,169,96,0.15);border-radius:var(--radius-sm);padding:24px 20px;text-align:center;transition:all 0.3s;scroll-margin-top:100px}
+.tambor-card:hover{border-color:var(--gold);background:rgba(255,255,255,0.05)}
+.tambor-card-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--cream);margin-bottom:4px}
+.tambor-card-sub{font-size:12px;color:rgba(247,244,237,0.5);margin-bottom:16px}
+.tambor-card-price{font-size:30px;font-weight:700;color:var(--gold);line-height:1;margin-bottom:4px}
+.tambor-card-price span{font-size:14px;font-weight:400;color:rgba(247,244,237,0.5)}
+.tambor-card-detail{font-size:12px;color:rgba(247,244,237,0.5);margin-bottom:16px}
+.tambor-card-feats{list-style:none;text-align:left;margin-bottom:18px}
+.tambor-card-feats li{font-size:12px;color:rgba(247,244,237,0.65);padding:4px 0;padding-left:18px;position:relative}
+.tambor-card-feats li::before{content:'✓';position:absolute;left:0;color:var(--gold);font-weight:700}
+.tambor-card-btn{display:block;padding:11px;background:var(--gold);color:var(--green-deep);border-radius:40px;text-decoration:none;font-weight:600;font-size:13px;transition:all 0.3s}
+.tambor-card-btn:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(200,169,96,0.3)}
 
 /* === VENTAJAS === */
 .ventajas-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:760px;margin:0 auto}
@@ -175,7 +203,7 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-w
 <!-- HEADER -->
 <header class="header" id="header">
   <div class="logo-text">Camargo<span>.</span></div>
-  <a href="https://api.whatsapp.com/send?phone=5491151394939&text=Hola%2C%20quiero%20consultar%20por%20Alcohol%20de%20Cereal" class="header-cta" target="_blank" rel="noopener">
+  <a href="https://api.whatsapp.com/send?phone=5491151394939&text=Hola%2C%20quiero%20consultar%20por%20Alcohol%20de%20Cereal" class="header-cta wa-link" data-section="header" data-modalidad="general" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.594-.822-6.341-2.2l-.442-.36-3.09 1.036 1.036-3.09-.36-.442A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
     Cotizá ahora
   </a>
@@ -193,7 +221,7 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-w
     <h1>Alcohol de Cereal<br>Tridestilado<br><em>Extra Neutro</em></h1>
     <p class="hero-desc">Pureza absoluta. Sin sabor, sin aroma, sin aditivos. Calidad premium para quienes exigen lo mejor en cada gota.</p>
     <div class="hero-btns">
-      <a href="https://api.whatsapp.com/send?phone=5491151394939&text=Hola%2C%20quiero%20consultar%20por%20Alcohol%20de%20Cereal" class="btn-primary" target="_blank" rel="noopener">
+      <a href="https://api.whatsapp.com/send?phone=5491151394939&text=Hola%2C%20quiero%20consultar%20por%20Alcohol%20de%20Cereal" class="btn-primary wa-link" data-section="hero" data-modalidad="general" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.594-.822-6.341-2.2l-.442-.36-3.09 1.036 1.036-3.09-.36-.442A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
         Cotizá por WhatsApp
       </a>
@@ -239,52 +267,119 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-w
 <!-- PRECIOS -->
 <section class="precios-section" id="precios">
   <div style="max-width:1000px;margin:0 auto">
-    <p class="section-label">Precios de Referencia</p>
-    <h2 class="section-title" style="color:var(--cream)">Elegí tu presentación</h2>
-    <p class="section-sub">Precios sin IVA, sujetos a disponibilidad. Descuentos por volumen.</p>
+    <p class="section-label">Elegí tu modalidad</p>
+    <h2 class="section-title" style="color:var(--cream)">Precios vigentes 2026</h2>
+    <p class="section-sub">Descuentos por volumen. Cotización inmediata por WhatsApp.</p>
+
+    <!-- 2 tarjetas principales: Bidón con envase CABA + Caja Interior -->
     <div class="precios-grid">
-      <!-- Fraccionado -->
-      <div class="precio-card popular">
+
+      <!-- TARJETA 1: BIDÓN CON ENVASE CABA -->
+      <div class="precio-card popular" id="bidon-envase">
         <div class="popular-tag">Más pedido</div>
         <div class="precio-header">
-          <div class="precio-type">Fraccionado</div>
-          <div class="precio-name">Bidones 5 Litros</div>
-          <div class="precio-pres">Con envase nuevo</div>
+          <div class="precio-type">CABA / GBA</div>
+          <div class="precio-name">Bidón 5L con envase</div>
+          <div class="precio-pres">Para tu primera compra</div>
         </div>
         <div class="precio-amount">
           <div class="precio-desde-label">desde</div>
-          <div class="precio-number">$2.200<span>/bidón</span></div>
-          <p class="precio-note">Con caja: $2.400 · Recambio: $2.050</p>
+          <div class="precio-number">$11.000<span>/bidón</span></div>
+          <div class="precio-sub-amount">$2.200 / litro</div>
         </div>
         <ul class="precio-feats">
-          <li>CABA/GBA: envío o retiro en depósito</li>
-          <li>Interior: mínimo 20L por encomienda</li>
-          <li>Descuentos desde 80 litros</li>
-          <li>Cajas a medida para envíos seguros</li>
+          <li>Bidón nuevo incluido</li>
+          <li>Mínimo 4 bidones (20L)</li>
+          <li>Envío CABA/GBA desde 40L</li>
+          <li>Envío gratis a partir de 150L</li>
         </ul>
-        <a href="https://api.whatsapp.com/send?phone=5491151394939&text=Hola%2C%20quiero%20cotizar%20Alcohol%20de%20Cereal%20fraccionado%20en%20bidones%20de%205L" class="precio-btn" target="_blank" rel="noopener">Cotizar fraccionado →</a>
+        <a href="https://api.whatsapp.com/send?phone=5491151394939&text=Hola%2C%20quiero%20cotizar%20Bid%C3%B3n%205L%20con%20envase%20CABA%2FGBA" class="precio-btn wa-link" data-section="precios" data-modalidad="envase_caba" target="_blank" rel="noopener">Cotizar fraccionado →</a>
+
+        <!-- Bloque volumen alto -->
+        <div class="inline-block" id="volumen-caba">
+          <div class="inline-block-label">💼 ¿Comprás 100L o más?</div>
+          <div class="inline-block-sub">Tenemos precios especiales por volumen</div>
+          <a href="https://api.whatsapp.com/send?phone=5491151394939&text=Hola%2C%20quiero%20cotizar%20VOLUMEN%20100L%20o%20m%C3%A1s%20CABA%2FGBA" class="inline-block-link wa-link" data-section="precios" data-modalidad="volumen_caba" target="_blank" rel="noopener">Cotizar mayorista →</a>
+        </div>
+
+        <!-- Bloque recambio -->
+        <div class="inline-block" id="recambio-bidon">
+          <div class="inline-block-label">💡 ¿Ya tenés tus bidones vacíos?</div>
+          <div class="inline-block-sub">Recambio: desde $10.500/bidón ($2.100/L)</div>
+          <a href="https://api.whatsapp.com/send?phone=5491151394939&text=Hola%2C%20quiero%20cotizar%20Recambio%20Bid%C3%B3n%205L%20CABA%2FGBA" class="inline-block-link wa-link" data-section="precios" data-modalidad="recambio_bidon" target="_blank" rel="noopener">Cotizar recambio bidón →</a>
+        </div>
       </div>
-      <!-- Tambor -->
-      <div class="precio-card">
+
+      <!-- TARJETA 2: CAJA INTERIOR -->
+      <div class="precio-card" id="caja-interior">
         <div class="precio-header">
-          <div class="precio-type">Mayorista</div>
-          <div class="precio-name">Tambor 200 Litros</div>
-          <div class="precio-pres">Tambor cerrado</div>
+          <div class="precio-type">Interior del país</div>
+          <div class="precio-name">Caja x 4 bidones (20L)</div>
+          <div class="precio-pres">Envíos a todo el país</div>
         </div>
         <div class="precio-amount">
           <div class="precio-desde-label">desde</div>
-          <div class="precio-number">$1.695<span>/litro</span></div>
-          <p class="precio-note">Recambio. Con tambor nuevo: consultar</p>
+          <div class="precio-number">$47.000<span>/caja</span></div>
+          <div class="precio-sub-amount">$2.350 / litro · + flete</div>
         </div>
         <ul class="precio-feats">
-          <li>Tambor completo de 200 litros</li>
-          <li>CABA/GBA: transporte propio</li>
-          <li>Interior: carga o encomienda</li>
-          <li>Mismo producto, misma calidad</li>
+          <li>4 bidones de 5L (20L total)</li>
+          <li>Caja a medida + despacho</li>
+          <li>Mínimo 2 cajas (40L)</li>
+          <li>Flete sin cargo hasta el transporte (desde 3 cajas)</li>
         </ul>
-        <a href="https://api.whatsapp.com/send?phone=5491151394939&text=Hola%2C%20quiero%20cotizar%20Alcohol%20de%20Cereal%20en%20tambor%20de%20200L" class="precio-btn" target="_blank" rel="noopener">Cotizar tambor →</a>
+        <a href="https://api.whatsapp.com/send?phone=5491151394939&text=Hola%2C%20quiero%20cotizar%20Caja%20Interior%20Alcohol%20de%20Cereal" class="precio-btn wa-link" data-section="precios" data-modalidad="caja_interior" target="_blank" rel="noopener">Cotizar Interior →</a>
+
+        <!-- Bloque volumen alto Interior -->
+        <div class="inline-block" id="volumen-interior">
+          <div class="inline-block-label">💼 ¿Comprás 100L o más?</div>
+          <div class="inline-block-sub">Tenemos precios especiales para B2B Interior</div>
+          <a href="https://api.whatsapp.com/send?phone=5491151394939&text=Hola%2C%20quiero%20cotizar%20VOLUMEN%20100L%20o%20m%C3%A1s%20Interior" class="inline-block-link wa-link" data-section="precios" data-modalidad="volumen_interior" target="_blank" rel="noopener">Cotizar mayorista Interior →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BLOQUE MAYORISTA TAMBOR -->
+    <div class="tambor-block" id="tambor">
+      <div class="tambor-header">
+        <span class="tambor-header-icon">🛢️</span>
+        <h3>Mayorista — Tambor 200L</h3>
+        <p>Para clientes industriales · Envíos a todo el país</p>
+      </div>
+      <div class="tambor-grid">
+
+        <!-- Tambor Recambio -->
+        <div class="tambor-card" id="tambor-recambio">
+          <div class="tambor-card-name">Recambio tambor</div>
+          <div class="tambor-card-sub">Traés vos el tambor vacío</div>
+          <div class="tambor-card-price">$1.695<span>/L</span></div>
+          <div class="tambor-card-detail">desde $339.000 / tambor</div>
+          <ul class="tambor-card-feats">
+            <li>Mínimo 1 tambor (200L)</li>
+            <li>Descuentos desde 3 tambores</li>
+            <li>Mejores precios a mayor volumen</li>
+          </ul>
+          <a href="https://api.whatsapp.com/send?phone=5491151394939&text=Hola%2C%20quiero%20cotizar%20Tambor%20200L%20recambio" class="tambor-card-btn wa-link" data-section="precios" data-modalidad="tambor_recambio" target="_blank" rel="noopener">Cotizar recambio →</a>
+        </div>
+
+        <!-- Pack Tambor + Alcohol -->
+        <div class="tambor-card" id="tambor-venta">
+          <div class="tambor-card-name">Pack tambor + alcohol</div>
+          <div class="tambor-card-sub">Tambor + 200L incluidos</div>
+          <div class="tambor-card-price">$372.000<span></span></div>
+          <div class="tambor-card-detail">pack 200L (desde $1.860/L)</div>
+          <ul class="tambor-card-feats">
+            <li>Incluye tambor + 200L de alcohol</li>
+            <li>Packs hasta 1.000L (5 tambores)</li>
+            <li>Descuentos a partir de 600L</li>
+          </ul>
+          <a href="https://api.whatsapp.com/send?phone=5491151394939&text=Hola%2C%20quiero%20cotizar%20Pack%20Tambor%20200L%20%2B%20alcohol" class="tambor-card-btn wa-link" data-section="precios" data-modalidad="tambor_venta" target="_blank" rel="noopener">Cotizar pack tambor →</a>
+        </div>
+
       </div>
     </div>
+
   </div>
 </section>
 
@@ -337,8 +432,8 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-w
         <ul>
           <li>Transporte propio Camargo</li>
           <li>Entrega en 24 a 48 horas hábiles</li>
-          <li>Envío a partir de 20 litros</li>
-          <li>Retiro en depósito: sin mínimo</li>
+          <li>Envío desde 40L (8 bidones)</li>
+          <li>Retiro en depósito desde 20L (4 bidones)</li>
           <li>Depósito: La Tablada, Buenos Aires</li>
         </ul>
       </div>
@@ -347,9 +442,9 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-w
         <ul>
           <li>Vía Cargo, Buspack, SendBox</li>
           <li>Transporte de carga desde CTC</li>
-          <li>Mínimo: 20 litros (4 bidones)</li>
+          <li>Mínimo: 2 cajas (40L)</li>
           <li>Cajas a medida para protección</li>
-          <li>Pago del flete contra entrega</li>
+          <li>Flete sin cargo hasta el transporte (desde 3 cajas)</li>
         </ul>
       </div>
     </div>
@@ -377,14 +472,14 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-w
     <div class="pago-item"><span>💵</span>Efectivo</div>
     <div class="pago-item"><span>🏦</span>Transferencia</div>
   </div>
-  <p style="font-size:13px;color:var(--ink-muted);margin-top:20px">CABA/GBA: efectivo o transferencia · Interior: transferencia · Emitimos Factura C</p>
+  <p style="font-size:13px;color:var(--ink-muted);margin-top:20px">CABA/GBA: efectivo o transferencia · Interior: transferencia</p>
 </section>
 
 <!-- CTA FINAL -->
 <section class="cta-final">
   <h2>¿Necesitás Alcohol de Cereal?</h2>
   <p>Escribinos por WhatsApp y te cotizamos en el momento. Stock disponible, envíos a todo el país.</p>
-  <a href="https://api.whatsapp.com/send?phone=5491151394939&text=Hola%2C%20quiero%20consultar%20por%20Alcohol%20de%20Cereal" class="btn-primary" target="_blank" rel="noopener">
+  <a href="https://api.whatsapp.com/send?phone=5491151394939&text=Hola%2C%20quiero%20consultar%20por%20Alcohol%20de%20Cereal" class="btn-primary wa-link" data-section="cta_final" data-modalidad="general" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.594-.822-6.341-2.2l-.442-.36-3.09 1.036 1.036-3.09-.36-.442A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
     Cotizá ahora por WhatsApp
   </a>
@@ -397,25 +492,125 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-w
 </footer>
 
 <!-- WA FLOTANTE -->
-<a href="https://api.whatsapp.com/send?phone=5491151394939&text=Hola%2C%20quiero%20consultar%20por%20Alcohol%20de%20Cereal" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+<a href="https://api.whatsapp.com/send?phone=5491151394939&text=Hola%2C%20quiero%20consultar%20por%20Alcohol%20de%20Cereal" class="wa-float wa-link" data-section="float" data-modalidad="general" target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.594-.822-6.341-2.2l-.442-.36-3.09 1.036 1.036-3.09-.36-.442A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
 </a>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// Header scroll effect
-const header = document.getElementById('header');
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 60);
-});
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 
-// Scroll reveal
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.style.opacity = '1';
-      e.target.style.transform = 'translateY(0)';
+<script>
+/* ===========================================================================
+   CAMARGO LANDING - SCRIPTS
+   FALLBACK SAFE: si este JS falla, los CTAs igual funcionan con prefilled
+   básico hardcoded en cada href.
+   =========================================================================== */
+
+try {
+  // ---------- 1) Header scroll effect ----------
+  var header = document.getElementById('header');
+  if (header) {
+    window.addEventListener('scroll', function() {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    });
+  }
+
+  // ---------- 2) Scroll reveal ----------
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.uso, .ventaja, .envio, .precio-card, .tambor-card').forEach(function(el) {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity 0.6s, transform 0.6s';
+      observer.observe(el);
+    });
+  }
+
+  // ---------- 3) WhatsApp link builder con detección de origen ----------
+  (function() {
+    var PHONE = '5491151394939';
+
+    function getUtms() {
+      var params = new URLSearchParams(window.location.search);
+      return {
+        source: (params.get('utm_source') || '').toLowerCase()
+      };
     }
-  });
-}, { threshold: 0.1 });
 
-document.query
+    function getOriginPrefix(utms) {
+      if (utms.source === 'google') return 'Vi el aviso en Google';
+      if (utms.source === 'facebook' || utms.source === 'meta' || utms.source === 'instagram' || utms.source === 'ig' || utms.source === 'fb') return 'Vi el aviso en Meta';
+      return 'Hola, quiero consultar';
+    }
+
+    function getModalityText(modalidad) {
+      var map = {
+        'envase_caba':      'cotizar Bidón 5L con envase CABA/GBA',
+        'recambio_bidon':   'cotizar Recambio Bidón 5L CABA/GBA',
+        'caja_interior':    'cotizar Caja Interior Alcohol de Cereal',
+        'tambor_recambio':  'cotizar Tambor 200L recambio',
+        'tambor_venta':     'cotizar Pack Tambor 200L + alcohol',
+        'volumen_caba':     'cotizar VOLUMEN 100L o más CABA/GBA',
+        'volumen_interior': 'cotizar VOLUMEN 100L o más Interior',
+        'general':          'por Alcohol de Cereal'
+      };
+      return map[modalidad] || map['general'];
+    }
+
+    function buildWaLink(modalidad) {
+      var utms = getUtms();
+      var prefix = getOriginPrefix(utms);
+      var modText = getModalityText(modalidad);
+      var fullText = prefix + ', ' + modText;
+      return 'https://api.whatsapp.com/send?phone=' + PHONE + '&text=' + encodeURIComponent(fullText);
+    }
+
+    function applyWaLinks() {
+      try {
+        document.querySelectorAll('.wa-link').forEach(function(el) {
+          var modalidad = el.getAttribute('data-modalidad') || 'general';
+          el.setAttribute('href', buildWaLink(modalidad));
+        });
+      } catch (e) {
+        // Silencioso: si algo falla, los href ya tienen fallback hardcoded
+      }
+    }
+
+    function autoScrollToAnchor() {
+      try {
+        if (window.location.hash) {
+          var target = document.querySelector(window.location.hash);
+          if (target) {
+            setTimeout(function() {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 600);
+          }
+        }
+      } catch (e) {}
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() {
+        applyWaLinks();
+        autoScrollToAnchor();
+      });
+    } else {
+      applyWaLinks();
+      autoScrollToAnchor();
+    }
+  })();
+
+} catch (e) {
+  // Si TODO el script falla, los CTAs siguen funcionando con href hardcoded
+}
+</script>
+
+</body>
+</html>
