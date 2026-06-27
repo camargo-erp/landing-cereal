@@ -86,6 +86,18 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-w
 .hero-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);color:rgba(247,244,237,0.3);font-size:12px;letter-spacing:2px;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px;animation:pulse 2s infinite}
 .hero-scroll::after{content:'';width:1px;height:32px;background:linear-gradient(to bottom,rgba(200,169,96,0.4),transparent)}
 
+/* === BANNER MINIMOS === */
+.minimos-banner{background:var(--green-mid);border-top:2px solid var(--gold);border-bottom:2px solid var(--gold);padding:28px 24px}
+.minimos-inner{max-width:1000px;margin:0 auto;text-align:center}
+.minimos-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--gold);margin-bottom:18px;letter-spacing:0.5px}
+.minimos-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:880px;margin:0 auto}
+@media(max-width:768px){.minimos-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:420px){.minimos-grid{grid-template-columns:1fr}}
+.minimo-item{background:rgba(255,255,255,0.05);border:1px solid rgba(200,169,96,0.25);border-radius:var(--radius-sm);padding:14px 12px}
+.minimo-item .mi-num{font-size:24px;font-weight:700;color:var(--cream);line-height:1.1}
+.minimo-item .mi-label{font-size:12px;color:rgba(247,244,237,0.7);margin-top:4px;line-height:1.4}
+.minimos-note{font-size:12px;color:rgba(247,244,237,0.55);margin-top:14px;line-height:1.5}
+
 /* === SECCIONES === */
 .section{padding:80px 24px;max-width:1000px;margin:0 auto}
 .section-label{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-dark);font-weight:600;margin-bottom:12px;text-align:center}
@@ -249,6 +261,32 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-w
   <div class="hero-scroll">Descubrí más</div>
 </section>
 
+<!-- BANNER MINIMOS -->
+<section class="minimos-banner">
+  <div class="minimos-inner">
+    <div class="minimos-title">📦 Pedido mínimo: 20 litros (4 bidones)</div>
+    <div class="minimos-grid">
+      <div class="minimo-item">
+        <div class="mi-num">20L</div>
+        <div class="mi-label">Retiro en depósito<br>La Tablada</div>
+      </div>
+      <div class="minimo-item">
+        <div class="mi-num">40L</div>
+        <div class="mi-label">Envío a domicilio<br>CABA/GBA (con cargo)</div>
+      </div>
+      <div class="minimo-item">
+        <div class="mi-num">150L</div>
+        <div class="mi-label">Envío sin cargo<br>CABA/GBA</div>
+      </div>
+      <div class="minimo-item">
+        <div class="mi-num">20L</div>
+        <div class="mi-label">Interior · 1 caja<br>(por encomienda)</div>
+      </div>
+    </div>
+    <div class="minimos-note">No realizamos ventas por debajo de 20 litros. El envío al interior se abona contra entrega.</div>
+  </div>
+</section>
+
 <!-- USOS -->
 <section class="section">
   <p class="section-label">Aplicaciones</p>
@@ -334,8 +372,8 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-w
         <ul class="precio-feats">
           <li>4 bidones de 5L (20L total)</li>
           <li>Caja a medida + despacho</li>
-          <li>Mínimo 2 cajas (40L)</li>
-          <li>Flete sin cargo hasta el transporte (desde 3 cajas)</li>
+          <li>Mínimo 1 caja (20L)</li>
+          <li>Sin cargo hasta el transporte desde 3 cajas</li>
         </ul>
         <a href="https://api.whatsapp.com/send?phone=5491151394939&text=Hola%2C%20quiero%20cotizar%20Caja%20Interior%20Alcohol%20de%20Cereal" class="precio-btn wa-link" data-section="precios" data-modalidad="caja_interior" target="_blank" rel="noopener">Cotizar Interior →</a>
 
@@ -447,9 +485,9 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-w
         <ul>
           <li>Vía Cargo, Buspack, SendBox</li>
           <li>Transporte de carga desde CTC</li>
-          <li>Mínimo: 2 cajas (40L)</li>
+          <li>Mínimo: 1 caja (20L)</li>
           <li>Cajas a medida para protección</li>
-          <li>Flete sin cargo hasta el transporte (desde 3 cajas)</li>
+          <li>Sin cargo hasta el transporte desde 3 cajas</li>
         </ul>
       </div>
     </div>
@@ -492,7 +530,7 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-w
 
 <!-- FOOTER -->
 <footer class="footer">
-  <p>Camargo Distribuidora · Ombú 4979, La Tablada, Buenos Aires · <a href="tel:1151394939">11 5139-4939</a> · <a href="/cdn-cgi/l/email-protection#2c5a4942584d5f6c4f4d414d5e4b43024f4341024d5e"><span class="__cf_email__" data-cfemail="5224373c2633211231333f3320353d7c313d3f7c3320">[email&#160;protected]</span></a></p>
+  <p>Camargo Distribuidora · Ombú 4979, La Tablada, Buenos Aires · <a href="tel:1151394939">11 5139-4939</a></p>
   <p style="margin-top:8px"><a href="https://www.camargo.com.ar" target="_blank" rel="noopener">www.camargo.com.ar</a></p>
 </footer>
 
@@ -500,8 +538,6 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-w
 <a href="https://api.whatsapp.com/send?phone=5491151394939&text=Hola%2C%20quiero%20consultar%20por%20Alcohol%20de%20Cereal" class="wa-float wa-link" data-section="float" data-modalidad="general" target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.594-.822-6.341-2.2l-.442-.36-3.09 1.036 1.036-3.09-.36-.442A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
 </a>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 
 <script>
 /* ===========================================================================
